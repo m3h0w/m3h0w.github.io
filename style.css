@@ -5,3 +5,35 @@ a, a:hover{
 a:hover{
     /* color: #ccc; */
 }
+
+.info p{
+    display: inline-block;
+}
+
+.info span{
+    color: #ccc;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.title-container{
+    margin: 30px 0 20px 0;
+    padding: 0;
+}
+
+.separator{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.title{
+    line-height: 0.75;
+    margin-bottom: 18px;
+}
+  
+.subtitle{
+    font-size: 60%;
+    letter-spacing: 3.4px;
+}
