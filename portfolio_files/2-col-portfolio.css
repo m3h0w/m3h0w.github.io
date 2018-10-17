@@ -1,20 +1,6 @@
-/*!
- * Start Bootstrap - 2 Col Portfolio (https://startbootstrap.com/template-overviews/2-col-portfolio)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-2-col-portfolio/blob/master/LICENSE)
- */
-
 body {
   padding-top: 54px;
 }
-
-img { 
-    opacity: .6;
-    transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -webkit-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
-} 
 
 #logo{
     visibility: hidden;
@@ -23,38 +9,6 @@ img {
     -moz-transition: opacity .5s ease-in-out;
     -webkit-transition: opacity .5s ease-in-out;
     -o-transition: opacity .5s ease-in-out;
-}
-
-.info p{
-    display: inline-block;
-}
-
-.info span{
-    color: #ccc;
-}
-
-.no-padding{
-    padding: 0;
-}
-
-.title-container{
-    margin: 30px 0 20px 0;
-    padding: 0;
-}
-
-.separator{
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-}
-
-.title{
-    line-height: 0.75;
-    margin-bottom: 18px;
-}
-  
-.subtitle{
-    font-size: 60%;
-    letter-spacing: 3.4px;
 }
 
 img:hover { 
@@ -78,6 +32,16 @@ img:hover {
   body {
     padding-top: 56px;
   }
+
+  /* only apply the animation to computers, 
+  since it doesn't work well with touch screens */
+  img { 
+    opacity: .6;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    } 
 }
 
 .portfolio-item {

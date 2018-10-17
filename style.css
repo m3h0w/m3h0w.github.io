@@ -19,7 +19,7 @@ a:hover{
 }
 
 .title-container{
-    margin: 30px 0 20px 0;
+    margin: 0px 0 20px 0;
     padding: 0;
 }
 
@@ -36,4 +36,8 @@ a:hover{
 .subtitle{
     font-size: 60%;
     letter-spacing: 3.4px;
+}
+
+.navbar-wrapper{
+    margin-bottom: 30px;
 }
