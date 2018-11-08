@@ -41,3 +41,17 @@ a:hover{
 .navbar-wrapper{
     margin-bottom: 30px;
 }
+
+.fixed{
+    position: fixed;
+}
+
+.spacer{
+    height:100px;
+}
+
+@media (min-width: 1400px){
+    .container{
+        max-width: 1300px;
+    }
+}

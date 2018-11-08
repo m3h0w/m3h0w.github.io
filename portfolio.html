@@ -16,7 +16,7 @@
     <link href="./style.css" rel="stylesheet">
 </head>
 
-<body data-gr-c-s-loaded="true">
+<body data-gr-c-s-loaded="true" onload="removeSingleCharLineBreak()">
 
     <!-- Navigation -->
     <div class="navbar-wrapper">
@@ -48,7 +48,7 @@
 
         <!-- Page Heading -->
         <div class="title-container row">
-            <div class="no-padding col-lg-12">
+            <div class="no-padding col-lg-8">
                 <h1 class="title">Michał Gacka
                     </br>
                     <!-- <small class="subtitle">Creative Engineer</small> -->
@@ -80,7 +80,62 @@
         </h2>
 
         <div class="row">
-            <div class="col-lg-6 portfolio-item">
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                        <div class="card h-100">
+                            <a href="./portfolio/protein-structure-prediction.html"><img class="card-img-top" src="./images/protein.png" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="./portfolio/protein-structure-prediction.html">Protein tertiary structure prediction</a>
+                                    </br>
+                                    <!-- <small>Work: Carnegie Mellon University</small> -->
+                                </h4>
+        
+                                <p class="card-text">
+                                    Predicting the tertiary (3-dimensional) structure of a folded protein
+                                    given its primary structure (sequence of amino acids). 
+                                </p>
+                                <p class="card-footer-text">--- RNNs, Tensorflow, Bioinformatics ---
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                            <div class="card h-100">
+                                <a href="#"><img class="card-img-top" src="./images/product_recommendation.png" alt=""></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Product recommendation and churn in insurance</a>
+                                        </br>
+                                        <!-- <small>Work: Carnegie Mellon University</small> -->
+                                    </h4>
+            
+                                    <p class="card-text">
+                                        A product recommendation system and churn model for insurance companies.
+                                    </p>
+                                    <p class="card-footer-text">--- Sklearn, Keras, Oracle SQL Developer ---
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 portfolio-item">
+                                <div class="card h-100">
+                                    <a href="#"><img class="card-img-top" src="./images/attention.png" alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="#">Visual attention applied to object recognition</a>
+                                            </br>
+                                            <!-- <small>Work: Carnegie Mellon University</small> -->
+                                        </h4>
+                
+                                        <p class="card-text">
+                                            CNN's attention compared to human attention based of eye-tracking data.
+                                        </p>
+                                        <p class="card-footer-text">--- CNN, Keras, Attention Mechanism ---
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/colonoscopy.png" alt=""></a>
                     <div class="card-body">
@@ -101,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/parking.jpg" alt=""></a>
                     <div class="card-body">
@@ -118,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/traivel.png" alt=""></a>
                     <div class="card-body">
@@ -138,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/emotion_recognition.png" alt=""></a>
                     <div class="card-body">
@@ -157,7 +212,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/rules_module.png" alt=""></a>
                     <div class="card-body">
@@ -175,7 +230,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top" src="./images/furniture.png" alt=""></a>
                     <div class="card-body">
@@ -235,7 +290,7 @@
         <script src="./portfolio_files/jquery.min.js.download"></script>
         <script src="./portfolio_files/bootstrap.bundle.min.js.download"></script>
 
-
+        <script src="jquery-3.3.1.min.js"></script>
         <script>
             $(window).scroll(function () {
 
@@ -249,6 +304,43 @@
                     $('#logo').css('visibility', 'hidden');
                 }
             });
+        </script>
+
+        <script>
+                function removeSingleCharLineBreak(){
+var words = ['I', 'a', 'the', 'of', 'on', 'in', 'to', 'for', 'Its', 'its','of'
+    ];
+
+var elements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'td', 'td'];
+
+$.each(words, function(index, word){
+
+    var regex = new RegExp(" " + word + " ", "g");
+
+    $.each(elements, function(index, element){
+
+        $(element + ':contains( ' + word + ' )').each(function(){
+
+            if (word == '€') 
+            {
+                $(this).html(
+                    $(this).html().replace(regex, '&nbsp;' + word + '&nbsp;')
+                );       
+            }
+            else
+            {
+                $(this).html(
+                    $(this).html().replace(regex, ' ' + word + '&nbsp;')
+                );                    
+            }
+
+        });
+
+    });
+
+});
+
+}
         </script>
 
 </body>

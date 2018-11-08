@@ -2,8 +2,28 @@ body {
   padding-top: 54px;
 }
 
-footer{
+.project-text-column{
+    padding-left: 10px;
+}
+
+.footer{
+    width: 100%;
+    background: white;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
+}
+
+.footer:hover{
+    background-color: #FAFAFA;
+    transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -webkit-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+}
+
+.label{
+    font-size: 0.9em;
 }
 
 @media (min-width: 992px) {
@@ -11,3 +31,15 @@ footer{
     padding-top: 56px;
   }
 }
+
+@media (max-width: 767px) {
+    .fake{
+        display: none;
+
+    }
+    .fixed{
+        position: relative !important;
+    }
+}
+
+

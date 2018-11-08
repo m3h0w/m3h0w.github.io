@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="gr__blackrockdigital_github_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <link href="./item_files/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./item_files/portfolio-item.css" rel="stylesheet">
+
+    <link href="../style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+
+    <!-- Navigation -->
+    <div class="navbar-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="portfolio.html">MICHAŁ GACKA</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../portfolio.html">Portfolio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../me.html">Me
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+            <div class="col-md-6 fake"></div>
+
+        <div class="col-md-5 fixed">
+                <h1 class="my-2">
+                        Protein tertiary structure prediction
+                        <small>
+                            <a href='https://github.com/m3h0w/lstm-for-protein-tertiary-structure-prediction'>
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </small>
+                      </h1>
+                      <p>ITU University of Copenhagen, group work </br>
+                        </p>
+          <img class="img-fluid" src="../images/protein.png" alt="">
+        </div>
+
+        <div class="col-md-6 project-text-column">
+          <h2 class="my-2">Project description</h3>
+          <p></p>The goal is to be able to predict the 3-dimensional 
+          structure of a folded protein given its primary structure – 
+          a sequence of amino acids that it’s build from.</p>
+          <h4 class="my-3">Overview</h4>
+          Predicting proteins’ tertiary structure from their 
+          primary structure is one of the most important unsolved 
+          problems of biochemistry. Current methods are inaccurate 
+          and expensive. Machine Learning offers new toolset that 
+          promises cheaper and much more efficient solutions. 
+          One of the recent breakthroughs is Mohammed AlQuraishi’s 
+          paper on <a href='https://www.biorxiv.org/content/early/2018/02/14/265231.full.pdf'>
+            END-TO-END DIFFERENTIABLE LEARNING OF 
+          PROTEIN STRUCTURE
+        </a>, which this project aims to partially reproduce.
+        <br><br>
+        The project is part of an NLP and Deep Learning course.
+        <h4 class="my-3">Technologies</h4>
+        Python, Tensorflow and Jupyter Notebook
+        <h4 class="my-3">Technical Details</h4>
+        We use ProteinNet dataset as introduced by AlQuraishi and write the entire data processing pipeline in Tensorflow. The heart of the model is a multilayer bidirectional LSTM network. The model is train the model using ADAM optimizer on an MSE and MAE losses between predicted and true dihedral (torsional) angles.
+        <img class="my-2 img-fluid" src="../images/protein/protein_architecture.png" alt="">
+        <p class='label text-center'>Source: AlQuraishi, End-to-end differentiable learning of protein structure</p>
+        The main challenge in going from a sequence of letters representing amino acids to a 3-dimensional protein structure is 1)  an efficient loss calculation and 2) output of the network being angular. 
+        <ol class="my-3">
+            <li>	In the paper, protein’s tertiary structure is approximated by 3 torsional angles per amino acid, which then are used to reproduce the 3-dimensional structure to compute loss in that space. That process though is very computationally expensive, thus we’re focusing on a regression task that minimizes the loss between angles directly.</li>
+            <li>	We need to angularize the output of the network to compare it with true angles. As one approach, we predict 3 values directly squeezed into the range of [-pi, pi] by a scaled tanh. Another approach is to predict 6 values split into 3 pairs of 2 where each pair represents a vector in a 2-dimensional space, that can then be converted into an angle using atan2 function.</li>
+        </ol>
+        <h4 class="my-3">My contribution</h4>
+        I used Tensorflow to load the data from files saved in the tensor format, prepared a que based pipeline and a fully differentiable graph that first converts Euclidean coordinates of the protein atoms into its corresponding dihedral angles and then minimizes the loss between angles predicted by the bidirectional LSTM and the true angles in the training dataset.
+    </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <div class="spacer"></div>
+    <a href='../portfolio.html'>
+    <footer class="py-2 fixed footer">
+      <div class="container">
+        <p class="m-0 text-right text-black"><i class="fas fa-angle-double-left fa-2x"></i></p>
+      </div>
+    </footer>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./item_files/jquery.min.js.download"></script>
+    <script src="./item_files/bootstrap.bundle.min.js.download"></script>
+
+    <script>
+        (function($) {
+ 
+        jQuery( document ).ready(function() {
+            add_target_blank_to_external_links();
+        });
+
+        function add_target_blank_to_external_links(){
+            $('a[href^="http://"], a[href^="https://"]').not('a[href*="'+location.hostname+'"]').attr('target','_blank');
+        }
+        
+        })(jQuery);
+    </script>
+</body></html>
