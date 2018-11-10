@@ -2,6 +2,10 @@ body {
   padding-top: 54px;
 }
 
+ol p{
+    margin-top: 10px;
+}
+
 .project-text-column{
     padding-left: 10px;
 }
