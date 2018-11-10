@@ -48,7 +48,7 @@ img:hover {
   /* only apply the animation to computers, 
   since it doesn't work well with touch screens */
   img { 
-    opacity: .6;
+    opacity: .8;
     transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
     -webkit-transition: opacity .5s ease-out;
