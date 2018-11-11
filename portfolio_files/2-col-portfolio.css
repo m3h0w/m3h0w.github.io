@@ -17,10 +17,24 @@ img:hover {
 
 .card{
     overflow:hidden;
+    box-shadow: 0px 0px 15px 1px #e5e5f8;
+    border-radius: .5rem;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 15px 4px #dedefc;
 }
 
 .card-body{
     overflow:hidden;
+}
+
+.card a{
+    color: #0000AA !important;
+}
+
+.card a:hover{
+    color: #0000DD !important;
 }
 
 .card-text{
@@ -48,11 +62,19 @@ img:hover {
   /* only apply the animation to computers, 
   since it doesn't work well with touch screens */
   img { 
-    opacity: .8;
+    opacity: .85;
     transition: opacity .5s ease-out;
     -moz-transition: opacity .5s ease-out;
     -webkit-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
+    } 
+
+.card { 
+    /* box-shadow: 0px 0px 10px 1px #dcdcfa; */
+    transition: box-shadow .5s ease-out;
+    -moz-transition: box-shadow .5s ease-out;
+    -webkit-transition: box-shadow .5s ease-out;
+    -o-transition: box-shadow .5s ease-out;
     } 
 }
 

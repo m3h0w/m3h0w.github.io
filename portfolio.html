@@ -8,26 +8,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Michal Gacka - Portfolio: Work in progress...</title>
+    <title>Michal Gacka</title>
 
-    <link href="./portfolio_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
     <link href="./portfolio_files/2-col-portfolio.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body data-gr-c-s-loaded="true" onload="removeSingleCharLineBreak()">
 
     <!-- Navigation -->
-    <div class="navbar-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="navbar-wrapper stars">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a id="logo" class="navbar-brand" href="#">MICHAŁ GACKA</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -58,15 +54,15 @@
             <div class="no-padding col-lg-8">
                 <h1 class="title">Michał Gacka
                     <br>
-                    <!-- <small class="subtitle">Creative Engineer</small> -->
-                    <small class="subtitle">This website is under construction ;)</small>
+                    <small class="subtitle">Creative Engineer</small>
+                    <!-- <small class="subtitle">This website is under construction ;)</small> -->
                 </h1>
 
                 <p>
-                    I'm a full-stack web developer and a machine learning engineer. I believe that technology should
+                    I'm a machine learning engineer and a full-stack web developer. I believe that technology should
                     serve
                     humans and not the other way around. I want to use machine learning to improve
-                    quality of life and solve important problems of today. I play music and do improv theater.
+                    quality of life and solve important problems of today.
                 </p>
 
                 <div class="info">
@@ -159,10 +155,8 @@
                         </h4>
 
                         <p class="card-text">
-                            Developed software created a real time map for assesing quality of a colonoscopy exam.
-                            The project was developed as a POC desktop app based on gastroentherologist's expertise.
-                            I was focused on optical flow map that I used to calculate the distance travelled by the
-                            endoscopy camera inside patient's body.
+                            Software that created a real time map for assesing quality of a colonoscopy exam.
+                            The project was developed as a desktop app based on gastroentherologist's expertise.
                         </p>
                         <div class="typewriter">
                         <p class="card-footer-text"><i class="fas fa-terminal fa-sm text-gray"></i>  C++, OpenCV, OpticalFlow
@@ -203,9 +197,7 @@
                         <p class="card-text">An app that uses sentiment analysis
                             to estimate current mood in European countries based on twitter data and recommended travel
                             destinations
-                            together with prices fetched from Skyscanner api and a follow-through links to actual
-                            flight tickets for the upcoming weekend.
-                            Built in a team of 4, in approx. 24 hours for a hackathon.
+                            together with flight prices fetched from Skyscanner api.
                         </p>
                         <div class="typewriter">
                         <p class="card-footer-text"><i class="fas fa-terminal fa-sm text-gray"></i>  Python, JavaScript, Flask, ML
@@ -216,18 +208,16 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="./images/emotion_recognition.png" alt=""></a>
+                    <a href="./portfolio/t-sne-in-emotion-recognition.html"><img class="card-img-top" src="./images/emotion_recognition.png" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Parametric t-SNE for temporal Emotion Recognition visualization</a>
+                            <a href="./portfolio/t-sne-in-emotion-recognition.html">Parametric t-SNE for temporal Emotion Recognition visualization</a>
                             <!-- <small>University: University of Copenhagen groupwork</small> -->
                         </h4>
                         <p class="card-text">A novel technique for visualizing emotion recognition results including
                             the temporal dimension.
                             An "emotion space" is created using parametric t-SNE, where machine learning models can be
-                            visually compared with respect to modalities, models, and hyperparameters used. As a part
-                            of the project,
-                            we've used KNN and RNNs on the CMU multimodal dataset to perform emotion recognition.
+                            visually compared with respect to modalities, models, and hyperparameters used.
                         </p>
                         <div class="typewriter">
                         <p class="card-footer-text"><i class="fas fa-terminal fa-sm text-gray"></i>  Python, Keras, Machine Learning
@@ -238,17 +228,16 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="./images/rules_module.png" alt=""></a>
+                    <a href="./portfolio/insurance-rules-admin-panel.html"><img class="card-img-top" src="./images/rules_module.png" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Rule-based Insurance Recommendation - Admin Panel</a>
+                            <a href="./portfolio/insurance-rules-admin-panel.html">Rule-based Insurance Recommendation - Admin Panel</a>
                             <br>
                             <!-- <small>Work: GoBundl / TIA Technology</small> -->
                         </h4>
-                        <p class="card-text">A versatile web app that allows its user to set rules that get
+                        <p class="card-text">A web app that allows its user to set rules that get
                             evaluated based on input features. Its primary goal was to create a universal way of
-                            deciding which insurance products should be displayed depending on the user.
-                            The app communicates with various API's and exposes endpoints for front-ends.
+                            deciding which insurance products should be displayed depending on the user's information.
                         </p>
                         <div class="typewriter">
                         <p class="card-footer-text"><i class="fas fa-terminal fa-sm text-gray"></i>  Full-stack, Flask, React, SQLite
@@ -259,16 +248,15 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="./images/furniture.png" alt=""></a>
+                    <a href="./portfolio/cnn-for-furniture-recognition.html"><img class="card-img-top" src="./images/furniture.png" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">CNNs & Transfer Learning for Furniture Recognition</a>
+                            <a href="./portfolio/cnn-for-furniture-recognition.html">CNNs & Transfer Learning for Furniture Recognition</a>
                             <br>
                             <!-- <small>University: University of Copenhagen</small> -->
                         </h4>
-                        <p class="card-text">Project developed for a course, solving Kaggle competition. I used
-                            Convolutional Neural Networks to distinguish between 128 classes of furniture. I utilized
-                            transfer learning and worked with GPU's in the cloud, on a Linux machine.
+                        <p class="card-text">Project developed for a course and a Kaggle competition. I used
+                            Convolutional Neural Networks to distinguish between 128 classes of furniture.
                         </p>
                         <div class="typewriter">
                                 <p class="card-footer-text"><i class="fas fa-terminal fa-sm text-gray"></i>  Azure, CNNs, Keras, Kaggle

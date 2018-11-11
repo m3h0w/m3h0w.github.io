@@ -1,6 +1,32 @@
+body{
+    color: #00001A !important;
+}
+
 a, a:hover{
     text-decoration: none;
 }
+
+.navbar{
+    background-color:#00001A !important;
+}
+
+.navbar a{
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    }
+    to {
+      text-shadow: 0 0 2px #fff;
+    }
+  }
+
 
 a:hover{
     /* color: #ccc; */
@@ -47,7 +73,7 @@ a:hover{
 }
 
 .spacer{
-    height:100px;
+    height:70px;
 }
 
 @media (min-width: 1400px){
@@ -88,3 +114,9 @@ a:hover{
     from, to { border-color: transparent }
     50% { border-color: black; }
   }
+
+@media (max-width: 768px){
+    .navbar-wrapper{
+        margin-bottom: 20px;
+    }
+}

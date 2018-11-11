@@ -56,36 +56,39 @@
 
         <div class="col-md-5 fixed">
                 <h1 class="my-2">
-                        Endoscopy Quality Evaluation
+                        Rule-based insurance recommendation admin panel web app
                         <small>
                             <!-- <a href='https://github.com/m3h0w/lstm-for-protein-tertiary-structure-prediction'>
                             <i class="fab fa-github"></i>
                             </a> -->
+                            <!-- <a href='https://drive.google.com/file/d/1j5ZXntRgbDE_mr_5zZtdQdE6zzUx7Mts/view?usp=sharing'>
+                                <i class="far fa-file-alt"></i>
+                                </a> -->
                         </small>
                       </h1>
-                      <p>Carnegie Mellon University <br>
+                      <p>GoBundl/TIA Technology<br>
                         </p>
-          <img class="img-fluid" src="../images/colonoscopy.png" alt="">
+          <img class="img-fluid" src="../images/rules_module/Start.png" alt="">
         </div>
 
         <div class="col-md-6 project-text-column">
           <h2 class="my-2">Project description</h3>
-          <p>The project aimed to improve the ability to evaluate the performance of a gastroenterologist performing a colonoscopy exam. Software was developed to provide a real-time feedback as well as an after-exam report.</p>
+          <p>The web app was build as a POC integrated on top of insurance backend to provide the functionality of setting up rules for displaying insurance depending on customer’s personal information.</p>
           <h4 class="my-3">Overview</h4>
-          Due to a relatively high technical difficulty of operating the endoscope during a colonoscopy exam (complicated, unintuitive interface) the success of the procedure is largely dependent on the skills of the doctor. Further, almost no quantitative, universal ways of measuring these skills exist, besides examining the post-factum statistic.
-          <br><br>
-          The project aimed to use only the camera feed in order to objectively and quantitatively evaluate doctor’s performance and output it in real-time for the doctor, as well as provide a report that can then be used to asses doctor’s performance and improvement over time and gather data about how the quality of the examination correlates with detected and missed cancers.          
+          TIA Technology is an insurance backend provider with a broad range of core functionalities for managing insurance business. It is now entering the space of customer- and agent-facing frontends, thus introducing space for personalized, automated user experiences. 
+          <br><br>The app allows an insurance employee to set rules for which insurance products should be visible and recommended to customers depending on their personal data. The app exposes an API based on these settings that a frontend solution can then communicate with.
         <h4 class="my-3">Technologies</h4>
-        C++, OpenCV, Optical Flow
+        Flask, ReactJS, SQLite        
         <h4 class="my-3">Technical Details</h4>
-        The software used classical computer vision techniques to asses multiple ways of measuring the quality of the examination. Clarity of the image, how well the patient has been prepared and so on. The most challenging part was a map that was going to approximate directly doctor’s technique in operating the endoscope. 
-        <img class="my-2 img-fluid" style="max-width: 60%;" src="../images/endoscopy/optical_flow.png" alt="">
-        <p class='label text-center'>One frame of Optical Flow in backwards motion</p>
-        For that optical flow was used to calculate the distance traveled by the endoscope in patient’s body and a map was outputted real time that approximated the examined parts of the colon.
-        <img class="my-2 img-fluid" src="../images/endoscopy/surface_map.png" alt="">
-        <p class='label text-center'>The real-time map of visited areas of the colon</p>
-        <h4 class="my-3">My contribution as a Research Assistant</h4>
-        I combined together previous work conducted by other Research Assistants and used optical flow to calculate the distance traveled by the camera inside patient’s body. I worked closely with a gastroenterologist and performed a live demo with him during an actual exam. 
+        A Flask-based backend was coupled with a ReactJS app and SQLite database. The frontend was designed to offer seamless experience, without interrupting the user’s interaction by subsequent API calls – they were handled in the background.
+        <img class="my-2 img-fluid" src="../images/rules_module/Desktop HD Copy 24.png" alt="">
+        <p class='label text-center'>The overview of created rules*</p>
+        <img class="my-2 img-fluid" src="../images/rules_module/Dropdown.png" alt="">
+        <p class='label text-center'>A "create persona" view*</p>
+        <h4 class="my-3">My contribution</h4>
+        I developed the entire product according to our designer's vision for the frontend.
+        
+        <br><br>*some details from the screenshots, like search, estimated premium graph, and frequently used rules haven’t been implemented for the POC
     </div>
 
       </div>
