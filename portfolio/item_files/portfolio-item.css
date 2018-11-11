@@ -2,6 +2,16 @@ body {
   padding-top: 54px;
 }
 
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-text-column img{
+    padding-top: 13px;
+}
+
 ol p{
     margin-top: 10px;
 }

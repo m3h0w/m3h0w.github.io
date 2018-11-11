@@ -60,46 +60,33 @@
 
         <div class="col-md-5 fixed">
                 <h1 class="my-2">
-                        Visual Attention applied to Object Recognition
+                        Parking Occupancy Detection
                         <small>
-                            <a href='https://github.com/m3h0w/visual-attention-cnn-and-eye-tracking'>
+                            <a href='https://github.com/m3h0w/lstm-for-protein-tertiary-structure-prediction'>
                             <i class="fab fa-github"></i>
                             </a>
                         </small>
                       </h1>
-                      <p>University of Copenhagen, group work <br>
+                      <p>Smart in<br>
                         </p>
-          <img class="img-fluid" src="../images/attention.png" alt="">
+          <img class="img-fluid" src="../images/parking.jpg" alt="">
         </div>
 
         <div class="col-md-6 project-text-column">
           <h2 class="my-2">Project description</h3>
-          <p>The aim of the project is to compare how Convolutional Neural Networks and Humans see the world by comparing where computer and human pays attention to during an object recognition task.</p>
+          <p>The software was supposed to output information about parking occupancy given a camera feed.</p>
           <h4 class="my-3">Overview</h4>
-          Due to the rise of Visual Attention mechanisms in machine learning it is now possible to model the cognitive process of paying attention in a computer. For a Cognitive Science course project we decided to see if the computer will choose to look at the same thing as a human does to recognize objects of 10 categories and if human eye-tracking data can be used to speed up the process of training the machine learning algorithm.
-        <br><br>
-        The project is part of a Cognitive Science course.
+          Poland is drastically developing technologies in the area of urban efficiency and smart cities. The city of Katowice has one of the largest surveillance systems in eastern Europe and is developing complementary technologies to improve quality of life for its citizens. The entire region is now striving to become “smarter” and a part of that goal is being able to improve traffic efficiency and drivers’ comfort by real-time monitoring of parking spaces.
+            <br><br>
+          Current technologies involve expensive electromagnetic sensors that are installed under each parking space. Camera-based technology would theoretically provide much cheaper solution to the problem and could make use of existing surveillance systems.
         <h4 class="my-3">Technologies</h4>
-        Python, Tensorflow, Keras, Eye-tracking
+        Python, OpenCV, Google Cloud Storage
         <h4 class="my-3">Technical Details</h4>
-        We use the <a href='http://calvin.inf.ed.ac.uk/datasets/poet-dataset/'>POET dataset</a> that provides eye-tracking data from multiple annotators that classified over 6 thousand images into 10 categories.
-        <img class="my-2 img-fluid" src="../images/attention/eye-tracking-fixations.png" alt="">
-        <img class="my-2 img-fluid" src="../images/attention/eye-tracking-heatmaps.png" alt="">
-        <p class='label text-center'>Source: http://calvin.inf.ed.ac.uk/datasets/poet-dataset/</p>
-        The project is divided into multiple parts that explore different training environments and relationships between the machine and the human: 
-        <ol class="my-3">
-            <li>	Standard CNN trained with a global pooling layer on top to gain spatially-dependent class activations (<a href='http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf'>reference</a>)</li>
-            <p>Here we can compare heat maps of human gaze with heat maps of which part of the CNN the model finds most meaningful for the given class and image.</p>
-            <li>	CNN with attention (<a href='https://arxiv.org/pdf/1502.03044.pdf'>reference</a>)</li>
-            <p>We build a CNN with an explicit, sequential attention mechanism built on top of it and compare that with how humans perform the task from sequential eye-tracking data.</p>
-            <li>	Using eye-tracking data to improve machine learning</li>
-            <p>In the last part we would like to train the model using eye-tracking data to improve convergence or guide the model in which parts of the image are more important than others and compare the results to a standard CNN.</p>
-        </ol>
-        <h4 class="my-3">My contribution</h4>
-        I came up with the idea for the project, devised our approach and partially reproduced the results from the CVPR16 paper referenced above in Keras. 
-    
-        <br><br>
-        The project is currently in progress.
+        The software used a simple Python interface to mark parking spaces on the camera feed and extract high frequency information from these areas to decide if given space has been taken or not. This problem is a perfect case for Machine Learning of course but at the time I haven’t had that expertise yet, thus the use of classical Computer Vision.
+        <img class="my-2 img-fluid" src="../images/parking/animation.gif" alt="">
+        The software has never been tested or sold, given that I left to study in Copenhagen and the company decided to use the electromagnetic sensors instead of camera-based solutions.
+        <h4 class="my-3">My contribution as Software Engineer</h4>
+        I developed the software myself.
     </div>
 
       </div>

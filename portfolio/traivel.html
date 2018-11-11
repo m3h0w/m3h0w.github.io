@@ -60,46 +60,41 @@
 
         <div class="col-md-5 fixed">
                 <h1 class="my-2">
-                        Visual Attention applied to Object Recognition
+                        TRAiVEL – sentiment-based travel recommendations
                         <small>
-                            <a href='https://github.com/m3h0w/visual-attention-cnn-and-eye-tracking'>
+                            <a href='https://github.com/m3h0w/TRAiVEL'>
                             <i class="fab fa-github"></i>
+                            </a>
+                            <a href='https://vimeo.com/263715035'>
+                                <i><i class="fab fa-vimeo-square"></i></i>
                             </a>
                         </small>
                       </h1>
-                      <p>University of Copenhagen, group work <br>
+                      <p>Hackathon, group work <br>
                         </p>
-          <img class="img-fluid" src="../images/attention.png" alt="">
+          <img class="img-fluid" src="../images/traivel.png" alt="">
         </div>
 
         <div class="col-md-6 project-text-column">
           <h2 class="my-2">Project description</h3>
-          <p>The aim of the project is to compare how Convolutional Neural Networks and Humans see the world by comparing where computer and human pays attention to during an object recognition task.</p>
+          <p>TRAiVEL delivers weekend destination flight prices based on Skyscanner API and visualizes sentiment-based happiness information for these destinations. </p>
           <h4 class="my-3">Overview</h4>
-          Due to the rise of Visual Attention mechanisms in machine learning it is now possible to model the cognitive process of paying attention in a computer. For a Cognitive Science course project we decided to see if the computer will choose to look at the same thing as a human does to recognize objects of 10 categories and if human eye-tracking data can be used to speed up the process of training the machine learning algorithm.
-        <br><br>
-        The project is part of a Cognitive Science course.
+          The project was built in around 24 hours in a team of 4 for a hackathon. Won a Skyscanner prize. The goal is to provide users with travel recommendations based on their current location and approximated happiness in the considered European countries.
+            <br><br>
+          The happiness is based on Twitter data scrapped for these countries and filtered to only consider native speakers. That is being sent to Microsoft Cognitive Services that provide sentiment analysis in many European languages (thus the choice of countries). In parallel, we request Skyscanner to provide actionable recommendation that can take he user directly to Skyscanner, where the tickets can be bought.
+          <img class="my-2 img-fluid" src="../images/traivel/traivel.gif" alt="">
+          Everything is visualized in a form of interactive map that could be adapted to many other data sources than just sentiment information.
         <h4 class="my-3">Technologies</h4>
-        Python, Tensorflow, Keras, Eye-tracking
+        Python, JavaScript, Flask, Skyscanner API, Twitter API, Microsoft Cognitive Services
         <h4 class="my-3">Technical Details</h4>
-        We use the <a href='http://calvin.inf.ed.ac.uk/datasets/poet-dataset/'>POET dataset</a> that provides eye-tracking data from multiple annotators that classified over 6 thousand images into 10 categories.
-        <img class="my-2 img-fluid" src="../images/attention/eye-tracking-fixations.png" alt="">
-        <img class="my-2 img-fluid" src="../images/attention/eye-tracking-heatmaps.png" alt="">
-        <p class='label text-center'>Source: http://calvin.inf.ed.ac.uk/datasets/poet-dataset/</p>
-        The project is divided into multiple parts that explore different training environments and relationships between the machine and the human: 
-        <ol class="my-3">
-            <li>	Standard CNN trained with a global pooling layer on top to gain spatially-dependent class activations (<a href='http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf'>reference</a>)</li>
-            <p>Here we can compare heat maps of human gaze with heat maps of which part of the CNN the model finds most meaningful for the given class and image.</p>
-            <li>	CNN with attention (<a href='https://arxiv.org/pdf/1502.03044.pdf'>reference</a>)</li>
-            <p>We build a CNN with an explicit, sequential attention mechanism built on top of it and compare that with how humans perform the task from sequential eye-tracking data.</p>
-            <li>	Using eye-tracking data to improve machine learning</li>
-            <p>In the last part we would like to train the model using eye-tracking data to improve convergence or guide the model in which parts of the image are more important than others and compare the results to a standard CNN.</p>
-        </ol>
+        The project was divided into 4 areas and developed in parallel by 4 people to later be integrated into one application: A) Twitter API integration, B) Microsoft Cognitive Services integration, C) Skyscanner API integration D) Main backend and frontend of the app.
+        For the backend we’ve used Flask to provide us with as much flexibility in that short time frame as possible and for the frontend we’ve used a library providing the map functionality.
+        The separate services have not been integrated together during the hackathon – the app operated on real data but it was statically saved for the purpose of the demo.        
         <h4 class="my-3">My contribution</h4>
-        I came up with the idea for the project, devised our approach and partially reproduced the results from the CVPR16 paper referenced above in Keras. 
+        I used Tensorflow to load the data from files saved in the tensor format, prepared a que based pipeline and a fully differentiable graph that first converts Euclidean coordinates of the protein atoms into its corresponding dihedral angles and then minimizes the loss between angles predicted by the bidirectional LSTM and the true angles in the training dataset.
     
         <br><br>
-        The project is currently in progress.
+        The project is currently in progress.    
     </div>
 
       </div>
