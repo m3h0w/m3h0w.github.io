@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129359323-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129359323-1');
+</script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -310,57 +320,57 @@
         <script src="./portfolio_files/bootstrap.bundle.min.js.download"></script>
 
         <script src="jquery-3.3.1.min.js"></script>
-        <script>
-            $(window).scroll(function () {
+<script>
+    $(window).scroll(function () {
 
-                //After scrolling 100px from the top...
-                if ($(window).scrollTop() >= 45) {
-                    $('#logo').css('visibility', 'visible');
-                    $('#logo').css('opacity', '1');
-                    //Otherwise remove inline styles and thereby revert to original stying
-                } else {
-                    $('#logo').css('opacity', '0');
-                    $('#logo').css('visibility', 'hidden');
-                }
+        //After scrolling 100px from the top...
+        if ($(window).scrollTop() >= 45) {
+            $('#logo').css('visibility', 'visible');
+            $('#logo').css('opacity', '1');
+            //Otherwise remove inline styles and thereby revert to original stying
+        } else {
+            $('#logo').css('opacity', '0');
+            $('#logo').css('visibility', 'hidden');
+        }
+    });
+</script>
+
+<script>
+        function removeSingleCharLineBreak(){
+        var words = ['I', 'a', 'the', 'of', 'on', 'in', 'to', 'for', 'Its', 'its','of'
+            ];
+
+        var elements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'td', 'td'];
+
+        $.each(words, function(index, word){
+
+            var regex = new RegExp(" " + word + " ", "g");
+
+            $.each(elements, function(index, element){
+
+                $(element + ':contains( ' + word + ' )').each(function(){
+
+                    if (word == '€') 
+                    {
+                        $(this).html(
+                            $(this).html().replace(regex, '&nbsp;' + word + '&nbsp;')
+                        );       
+                    }
+                    else
+                    {
+                        $(this).html(
+                            $(this).html().replace(regex, ' ' + word + '&nbsp;')
+                        );                    
+                    }
+
+                });
+
             });
-        </script>
-
-        <script>
-                function removeSingleCharLineBreak(){
-var words = ['I', 'a', 'the', 'of', 'on', 'in', 'to', 'for', 'Its', 'its','of'
-    ];
-
-var elements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'td', 'td'];
-
-$.each(words, function(index, word){
-
-    var regex = new RegExp(" " + word + " ", "g");
-
-    $.each(elements, function(index, element){
-
-        $(element + ':contains( ' + word + ' )').each(function(){
-
-            if (word == '€') 
-            {
-                $(this).html(
-                    $(this).html().replace(regex, '&nbsp;' + word + '&nbsp;')
-                );       
-            }
-            else
-            {
-                $(this).html(
-                    $(this).html().replace(regex, ' ' + word + '&nbsp;')
-                );                    
-            }
 
         });
 
-    });
-
-});
-
-}
-        </script>
+        }
+</script>
 
 </body>
 
