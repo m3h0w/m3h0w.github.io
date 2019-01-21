@@ -69,6 +69,9 @@
                             <a href='https://github.com/m3h0w/visual-attention-cnn-and-eye-tracking'>
                             <i class="fab fa-github"></i>
                             </a>
+                            <a href='https://drive.google.com/file/d/1YyhQtbGRLxEe5YRLwyaGAAHkHMd_Escl/view?usp=sharing'>
+                                <i class="far fa-file-alt"></i>
+                                </a>
                         </small>
                       </h1>
                       <p>University of Copenhagen, group work <br>
@@ -79,32 +82,49 @@
 
         <div class="col-md-6 project-text-column">
           <h2 class="my-2">Project description</h3>
-          <p>The aim of the project is to compare how Convolutional Neural Networks and Humans see the world by comparing where computer and human pays attention to during an object recognition task.</p>
+          <p>The aim of the project is to compare how Convolutional Neural Networks and Humans see the world by comparing 
+              where computer and human pay attention to during an object recognition task.</p>
           <h4 class="my-3">Overview</h4>
-          Due to the rise of Visual Attention mechanisms in machine learning it is now possible to model the cognitive process of paying attention in a computer. For a Cognitive Science course project we decided to see if the computer will choose to look at the same thing as a human does to recognize objects of 10 categories and if human eye-tracking data can be used to speed up the process of training the machine learning algorithm.
+          Due to the rise of Visual Attention mechanisms in machine 
+          learning it is now possible to model the cognitive process of paying attention in a computer. 
+          For a Cognitive Science course project we decided to see if the computer will 
+          choose to look at the same thing as a human does to recognize objects of 10 categories 
+          and if human eye-tracking data can be used to speed up the process of training the machine learning algorithm.
         <br><br>
-        The project is part of a Cognitive Science course.
+        The project is part of a Cognitive Science course at the University of Copenhagen.
         <h4 class="my-3">Technologies</h4>
         Python, Tensorflow, Keras, Eye-tracking
         <h4 class="my-3">Technical Details</h4>
-        We use the <a href='http://calvin.inf.ed.ac.uk/datasets/poet-dataset/'>POET dataset</a> that provides eye-tracking data from multiple annotators that classified over 6 thousand images into 10 categories.
+        We use the <a href='http://calvin.inf.ed.ac.uk/datasets/poet-dataset/'>POET dataset</a> 
+        that provides eye-tracking data from multiple annotators that classified over 6 thousand images into 10 categories.
         <img class="my-2 img-fluid" src="../images/attention/eye-tracking-fixations.png" alt="">
         <img class="my-2 img-fluid" src="../images/attention/eye-tracking-heatmaps.png" alt="">
         <p class='label text-center'>Source: http://calvin.inf.ed.ac.uk/datasets/poet-dataset/</p>
-        The project is divided into multiple parts that explore different training environments and relationships between the machine and the human: 
+        The project is divided into multiple parts that explore different training environments and relationships between the machine and the human attention: 
         <ol class="my-3">
-            <li>	Standard CNN trained with a global pooling layer on top to gain spatially-dependent class activations (<a href='http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf'>reference</a>)</li>
+            <li>	Standard CNN trained with a global pooling layer on top to gain spatially-dependent 
+                class activations (<a href='http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf'>reference</a>)</li>
             <p>Here we can compare heat maps of human gaze with heat maps of which part of the CNN the model finds most meaningful for the given class and image.</p>
             <li>	CNN with attention (<a href='https://arxiv.org/pdf/1502.03044.pdf'>reference</a>)</li>
-            <p>We build a CNN with an explicit, sequential attention mechanism built on top of it and compare that with how humans perform the task from sequential eye-tracking data.</p>
+            <p>We build a CNN with an explicit, sequential attention mechanism built on top of 
+                it and compare that with how humans perform the task from sequential eye-tracking data.</p>
             <li>	Using eye-tracking data to improve machine learning</li>
-            <p>In the last part we would like to train the model using eye-tracking data to improve convergence or guide the model in which parts of the image are more important than others and compare the results to a standard CNN.</p>
+            <p>In the last part we would like to train the model using eye-tracking data 
+                to improve convergence or guide the model in which parts of the image are more important than others and compare the results to a standard CNN.</p>
         </ol>
+        <h4 class="my-3">Results</h4>
+        The final report can be found <a href='https://drive.google.com/file/d/1YyhQtbGRLxEe5YRLwyaGAAHkHMd_Escl/view?usp=sharing'>here</a>. 
+        My work can be found under sections about
+        developing the attention visualization based on gradient theory and comparing CAM, soft attention 
+        and human attention.
         <h4 class="my-3">My contribution</h4>
-        I came up with the idea for the project, devised our approach and partially reproduced the results from the CVPR16 paper referenced above in Keras. 
-    
+        I came up with the idea for the project and devised the approach.
+        I proposed a novel approach to visualizing human attention from eye-tracking data 
+        using gradient theory.
         <br><br>
-        The project is currently in progress.
+        I developed a soft attention model in Tensorflow and extended an open-source CAM model.
+        I visualized both attention mechanisms and compared them to human attention using PCC.
+        <br>
     </div>
 
       </div>
@@ -140,4 +160,5 @@
         
         })(jQuery);
     </script>
+    
 </body></html>

@@ -72,6 +72,9 @@
                             <a href='https://github.com/m3h0w/lstm-for-protein-tertiary-structure-prediction'>
                             <i class="fab fa-github"></i>
                             </a>
+                            <a href='https://drive.google.com/file/d/1-SFavU5i6XlHK2sswy60k5TowgButezy/view?usp=sharing'>
+                                <i class="far fa-file-alt"></i>
+                                </a>
                         </small>
                       </h1>
                       <p>ITU University of Copenhagen, group work <br>
@@ -82,9 +85,10 @@
 
         <div class="col-md-6 project-text-column">
           <h2 class="my-2">Project description</h3>
-          <p>The goal is to be able to predict the 3-dimensional 
-          structure of a folded protein given its primary structure – 
-          a sequence of amino acids that it’s build from.</p>
+          <p>The goal of the project was to predict the angles that 
+              create the main structure (backbone) of the protein,
+              given information about its aminoacid sequence.
+          </p>
           <h4 class="my-3">Overview</h4>
           Predicting proteins’ tertiary structure from their 
           primary structure is one of the most important unsolved 
@@ -93,27 +97,46 @@
           promises cheaper and much more efficient solutions. 
           One of the recent breakthroughs is Mohammed AlQuraishi’s 
           paper on <a href='https://www.biorxiv.org/content/early/2018/02/14/265231.full.pdf'>
-            END-TO-END DIFFERENTIABLE LEARNING OF 
-          PROTEIN STRUCTURE
-        </a>, which this project aims to partially reproduce.
+           End-to-end differentiable learning of protein structure</a>, which together with 
+        <a href='https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/s12859-018-2065-x'>
+            RaptorX-Angle</a>, inspired this project.
         <br><br>
-        The project is part of an NLP and Deep Learning course.
+        The model was developed for a course but the results go beyond the regular scope of the class.
         <h4 class="my-3">Technologies</h4>
         Python, Tensorflow and Jupyter Notebook
         <h4 class="my-3">Technical Details</h4>
-        We use ProteinNet dataset as introduced by AlQuraishi and write the entire data processing pipeline in Tensorflow. The heart of the model is a multilayer bidirectional LSTM network. The model is trained using ADAM optimizer on an MSE and MAE losses between predicted and true dihedral (torsional) angles.
+        We use ProteinNet dataset as introduced by AlQuraishi and write the entire data processing pipeline in Tensorflow. 
+        The heart of the model is a Convolutional Neural Network, similar to the one introduced in RaptorX.
+        The model is trained using ADAM optimizer on an MSE and MAE losses between predicted and true dihedral (torsional) angles.
+
+        The LSTM from the image below is thus replaced with a CNN and we don't implement the pink part
+        that would convert the angles into a 3-dimensional, Euclidean space.
         <img class="my-2 img-fluid" src="../images/protein/protein_architecture.png" alt="">
         <p class='label text-center'>Source: AlQuraishi, End-to-end differentiable learning of protein structure</p>
-        The main challenge in going from a sequence of letters representing amino acids to a 3-dimensional protein structure is 1)  an efficient loss calculation and 2) output of the network being angular. 
+        The main challenge in going from a sequence of letters representing amino acids to a 3-dimensional protein structure is 
+        1) an efficient loss calculation and 2) output of the network being angular. 
         <ol class="my-3">
-            <li>	In the paper, protein’s tertiary structure is approximated by 3 torsional angles per amino acid, which then are used to reproduce the 3-dimensional structure to compute loss in that space. That process though is very computationally expensive, thus we’re focusing on a regression task that minimizes the loss between angles directly.</li>
-            <li>	We need to angularize the output of the network to compare it with true angles. As one approach, we predict 3 values directly squeezed into the range of [-pi, pi] by a scaled tanh. Another approach is to predict 6 values split into 3 pairs of 2 where each pair represents a vector in a 2-dimensional space, that can then be converted into an angle using atan2 function.</li>
+            <li>	In the AlQuraishi's paper, protein’s tertiary structure is approximated by 3 torsional angles per amino acid, 
+                which then are used to reproduce the 3-dimensional structure to compute loss in that space. 
+                That process though is very computationally expensive, thus we’re focusing on a regression task that minimizes the loss between angles directly
+                as also done in the RaptorX paper.</li>
+            <li>	We need to angularize the output of the network to compare it with true angles. 
+                As one approach, we predict 3 values directly squeezed into the range of [-pi, pi] 
+                by a scaled tanh. Another approach is to predict 6 values split into 3 pairs of 2 
+                where each pair represents a vector in a 2-dimensional space, that can then be converted into an angle using atan2 function.</li>
         </ol>
+        <h4 class="my-3">Results</h4>
+        The model developed in this project achieved results on par with results reported in RaptorX while
+        using a smaller feature space. The final report can be found <a href='https://drive.google.com/file/d/1-SFavU5i6XlHK2sswy60k5TowgButezy/view?usp=sharing'>here</a>.
         <h4 class="my-3">My contribution</h4>
-        I used Tensorflow to load the data from files saved in the tensor format, prepared a que based pipeline and a fully differentiable graph that first converts Euclidean coordinates of the protein atoms into its corresponding dihedral angles and then minimizes the loss between angles predicted by the bidirectional LSTM and the true angles in the training dataset.
+        I used Tensorflow to load the data from files saved in the tensor format, 
+        prepared a que-based pipeline and a fully differentiable graph that first converts Euclidean coordinates 
+        of the protein atoms into its corresponding dihedral angles and 
+        then minimizes the loss between angles predicted by the core model and the true angles in the training dataset.
+        I experimented with many ways of angularizing the output of the model and developed a clean, modular code
+        available on GitHub.
     
-        <br><br>
-        The project is currently in progress.    
+        <br>
     </div>
 
       </div>

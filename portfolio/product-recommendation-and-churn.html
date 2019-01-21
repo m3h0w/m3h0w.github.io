@@ -84,11 +84,15 @@
           <p>The goal is to build a product-grade system for predicting buying behavior of current and prospect customers of insurance companies and a model for predicting the probability of the customer resigning their policy next year. </p>
           <h4 class="my-3">Overview</h4>
           The entire insurance industry in Denmark is buzzing with machine learning- and data-driven opportunities yet not many companies attempted to improve their processes using related technologies. As a collaboration between TIA Technology and one of our customers, we set ourselves to build a product recommendation system and a churn model that are going to bring measurable business value and set a precedence for how machine learning can be efficiently used in Nordic insurance market.
-We use a KNN and Neural Network model for product recommendations and an LSTM RNN for the churn.
+We use a KNN and Neural Network model for product recommendations and an LSTM and XGBoost for the churn.
+            <br><br>
+            The gif below shows a live integration beetween a front-end platform and a machine learning api.
+            The predictions of the model change upon an insurance product being added to a customer's profile.
+        <img class="my-2 img-fluid" src="../images/product_recommendations_and_churn/icp_demo.gif" alt="">  
         <h4 class="my-3">Technologies</h4>
         Oracle SQL Developer, Python, Pandas, Keras, Sklearn, Flask, Docker
         <h4 class="my-3">Technical Details</h4>
-        We’re mostly working with data stored in a data warehouse prepared for the purposes of our BI department, which provides us with expertise regarding the data extraction. We’re using Pandas for data transformations, Sklearn for the product recommendations and Keras for time series modelling.
+        We're mostly working with data stored in a data warehouse prepared for the purposes of our BI department, which provides us with expertise regarding the data extraction. We’re using Pandas for data transformations, Sklearn for the product recommendations and Keras for time series modelling.
 The slides are a part of a presentation for a client we’re working with.
         <!-- <p class='label text-center'>Source: AlQuraishi, End-to-end differentiable learning of protein structure</p> -->
         <ol class="my-3">
@@ -105,11 +109,15 @@ The slides are a part of a presentation for a client we’re working with.
             </p>
         </ol>
         <h4 class="my-3">My contribution as an ML Software Engineer</h4>
-        I am involved in every part of the pipeline but I’m mainly responsible for the entire process from the data being available in a CSV format, through the conceptualizing, experimentation, model building, communication with the client, to a live API.
-        I'm passionate about bringing business value to the client and communicating Machine Learning in layman's terms, as shown on the above slide explaining KNN.
-    
+        I am involved in every part of the pipeline and I'm responsible 
+        for the entire process from the data being available in a CSV format, 
+        through the conceptualizing, experimentation, model building, communication with the client, to a live API.
         <br><br>
-        The project is currently in progress.    
+        I developed a product recommendation and churn model and created a Flask api for retraining it
+        and exposing its predictions. I integrated it with a front-end application and used docker-compose 
+        to make an online version of the product available for demo purposes.
+        
+        <br>
     </div>
 
       </div>
