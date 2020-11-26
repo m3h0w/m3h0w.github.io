@@ -1,8 +1,13 @@
 body {
-    color: #00001A !important;
+    background: linear-gradient(39deg, rgba(230, 230, 230, 1) 0%, rgba(255, 255, 255, 1) 100%);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #222;
+    min-height: 100vh;
+}
+
+footer {
+    border-top: 1px solid #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -94,7 +99,7 @@ a:hover {
 }
 
 .navbar-wrapper {
-    margin-bottom: 22px;
+    margin-bottom: 38px;
 }
 
 .fixed {
@@ -103,6 +108,10 @@ a:hover {
 
 .spacer {
     height: 70px;
+}
+
+.img-bordered {
+    border: 1px solid #999;
 }
 
 @media (min-width: 1400px) {
