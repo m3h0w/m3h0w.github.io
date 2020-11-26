@@ -1,16 +1,31 @@
-body{
+body {
     color: #00001A !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #222;
 }
 
-a, a:hover{
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+a, a:hover {
+    color: #9b00bd;
     text-decoration: none;
 }
 
-.navbar{
-    background-color:#00001A !important;
+a:hover {
+    color: #511061;
 }
 
-.navbar a{
+.navbar {
+    background: rgb(16, 7, 54);
+    background: linear-gradient(208deg, rgba(16, 7, 54, 1) 0%, rgba(39, 29, 50, 1) 59%, rgba(81, 16, 97, 1) 80%, rgba(155, 0, 189, 1) 100%);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .2);
+}
+
+.navbar a {
     color: #fff;
     text-align: center;
     -webkit-animation: glow 2s ease-in-out infinite alternate;
@@ -20,70 +35,84 @@ a, a:hover{
 
 @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff;
     }
     to {
-      text-shadow: 0 0 2px #fff;
+        text-shadow: 0 0 2px #fff;
     }
-  }
+}
 
-
-a:hover{
+a:hover {
     /* color: #ccc; */
 }
 
-.info p{
+.info p {
     display: inline-block;
 }
 
-.info span{
+.info span {
     color: #ccc;
 }
 
-.no-padding{
+.no-padding {
     padding: 0;
 }
 
-.title-container{
+.title-container {
     margin: 0px 0 20px 0;
     padding: 0;
 }
 
-.separator{
+.name-title-container {
+    margin-left: -5px;
+    display: flex;
+    flex-direction: 'row';
+    /* height: 30px; */
+}
+
+.name-title-line {
+    font-size: 63px;
+    line-height: 52px;
+    color: #444;
+}
+
+.separator {
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
 
-.title{
+.title {
     line-height: 0.75;
     margin-bottom: 18px;
 }
-  
-.subtitle{
-    font-size: 60%;
-    letter-spacing: 0.5px;
+
+.subtitle {
+    color: #555;
+    font-size: 79%;
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
 }
 
-.navbar-wrapper{
-    margin-bottom: 30px;
+.navbar-wrapper {
+    margin-bottom: 22px;
 }
 
-.fixed{
+.fixed {
     position: fixed;
 }
 
-.spacer{
-    height:70px;
+.spacer {
+    height: 70px;
 }
 
-@media (min-width: 1400px){
-    .container{
+@media (min-width: 1400px) {
+    .container {
         max-width: 1300px !important;
     }
 }
 
-@media (min-width: 768px){
-    .col-md-5{
+@media (min-width: 768px) {
+    .col-md-5 {
         -ms-flex: 0 0 37.666667%;
         flex: 0 0 37.666667%;
         max-width: 37.666667%;
@@ -94,29 +123,41 @@ a:hover{
     position: absolute;
     bottom: 8px;
     text-align: left;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end 5;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end 5;
+}
 
-@media (max-width: 768px){
-    .navbar-wrapper{
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-wrapper {
         margin-bottom: 20px;
     }
 }

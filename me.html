@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129359323-1"></script>
-<script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129359323-1"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-129359323-1');
-</script>
+    </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -22,6 +22,12 @@
     <link href="./bootstrap.min.css" rel="stylesheet">
     <link href="./contact_files/contact.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+
     <link href="./style.css" rel="stylesheet">
 
 </head>
@@ -30,29 +36,29 @@
 
     <!-- Navigation -->
     <div class="navbar-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="portfolio.html">MICHAŁ GACKA</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Me
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="portfolio.html">MICHAŁ GACKA</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Me
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </div>
 
     <!-- Page Content -->
@@ -66,22 +72,25 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-7">
-                <img class="img-fluid mb-3" style="width: 700px;" src="./images/me1.jpg" alt="">
+            <div class="col-md-6">
+                <img class="img-fluid mb-3" style="width: 600px;" src="./images/me1.jpg" alt="">
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <h3 class="mb-3">About me</h3>
                 <p>I am a machine learning engineer and a full-stack web developer. My current interests
-                    lie mostly in newest developments in learning algorithms for time-series analysis and computer vision.
-                    I'm interested in using these techniques for socially impactful projects, quick prototyping, and art.
-                <br><br>
+                    lie mostly in newest developments in learning algorithms for time-series analysis and computer
+                    vision.
+                    I'm interested in using these techniques for socially impactful projects, quick prototyping, and
+                    art.
+                    <br><br>
                     I belive that we can solve many of the pressing issues of humanity
                     by conciously and methodically using machine learning
                     together with web technologies.
-                <br><br>
+                    <br><br>
                     I am passionate about communication, improv theater, and writing music.
                 </p>
+                <div style="height: 10px"></div>
                 <h3 class="my-3">Contact</h3>
                 Please get in touch if you believe that we can do something good together!
                 <br><br>
@@ -94,12 +103,12 @@
                     <span>|</span>
                     <a href="https://github.com/m3h0w" target="_blank">GitHub</a>
                 </div>
-                <h3 class="my-3">Current projects</h3>
+                <!-- <h3 class="my-3">Current projects</h3>
                 <ul>
                     <a href='./portfolio/cnns-and-visual-attention.html'><li>Eye-tracking data and attention. CNNs in object recognition</li></a>
                     <a href='./portfolio/protein-structure-prediction.html'><li>Predicting protein tertiary structure based on amino acid sequences</li></a>
                     <a href='./portfolio/product-recommendation-and-churn.html'><li>Churn models and product recommendations in insurance data</li></a>
-                </ul>
+                </ul> -->
             </div>
 
         </div>
