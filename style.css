@@ -114,6 +114,10 @@ a:hover {
     border: 1px solid #999;
 }
 
+.img-fluid {
+    margin-bottom: 20px !important;
+}
+
 @media (min-width: 1400px) {
     .container {
         max-width: 1300px !important;
