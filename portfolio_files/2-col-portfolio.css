@@ -54,7 +54,7 @@ img:hover {
 }
 
 .card a img {
-    height: 230px;
+    /* height: 230px; */
 }
 
 @media (min-width: 992px) {
