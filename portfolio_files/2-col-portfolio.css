@@ -57,6 +57,12 @@ img:hover {
     /* height: 230px; */
 }
 
+/* Utility for normalizing portfolio thumbnail heights */
+.portfolio-thumb-cover {
+    height: 230px;
+    object-fit: cover;
+}
+
 @media (min-width: 992px) {
     body {
         padding-top: 56px;
